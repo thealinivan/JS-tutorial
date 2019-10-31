@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="script/index.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+
+    </div>
+    <div class=head-container>
+        <h1>JavaScript Class</h1>
+        <h5>My approach to Coders In Hoods classroom exercises</h5>
+    </div>
+    <a href="index.html" class=back-btn></a>
+    <div class=nav-container>
+        <h2>Lesson 0: exercise 1</h2>
+        <a href="#" class=exercise-in>Given you have string "0123456789" please use a while loop to iterate over it.<br>
+                The goal is to have with 2 variables called numOdd and numEven with values of how many items in that
+                string times 3 are even and how many odd, these values should be numbers.<br>
+                <br>
+                At each iteration we should log out to the console a string which says
+                'CURRENT ITEM IN THE STRING times 3 is even' or 'CURRENT ITEM IN THE STRING times 3 is odd'
+                </a>
+        <p>My approach:</p>
+        <a href="exercise2.html" class=exercise-in-sol>
+                const evenStr = `CURRENT ITEM IN THE STRING times 3 is even`<br>
+                const oddStr = `CURRENT ITEM IN THE STRING times 3 is odd`<br>
+                const text  = "0123456789"<br>
+                <br>
+                function num()<br>
+                {<br>
+                  this.value=0<br>
+                }<br>
+                <br>
+                let numEven = new num()<br>
+                let numOdd = new num()<br>
+                let i = 0<br>
+                <br>
+                function akNo(_number, _string)<br>
+                {<br>
+                  _number.value++<br>
+                  console.log(_string)<br>
+                }<br>
+                <br>
+                while(i < text.length)<br>
+                {<br>
+                    let bool = (text[i] * 3) % 2 === 0<br>
+                    bool ? akNo(numEven, evenStr) : akNo(numOdd, oddStr)<br>
+                    i++<br>
+                }<br>
+                <br>
+                console.log(`Even numbers qty: ${numEven.value}`)<br>
+                console.log(`Odd numbers qty: ${numOdd.value}`)</a><br>
+    </div>
+</body>
+
+</html>
