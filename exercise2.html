@@ -42,8 +42,49 @@
                 not all the values are of same type.<br></a>
         <p>My approach:</p>
         <a href="exercise2.html" class=exercise-in-sol>
-        pending..
-        </a>
+         //input array<br>
+let input_array = [["oops",7,"oops",0],[-10,0,0,0],["1","7","6","0"],[78,9,7.4,3,1]]<br>
+//result array<br>
+let result_array = [[],[],[],[]]<br>
+<br>
+//loop first array dimension<br>
+input_array.forEach(function(item, index) {<br>
+  //initial min and max values<br>
+  let max = -Infinity<br>
+  let min = Infinity<br>
+<br>
+  //loop second array dimension<br>
+  item.forEach(function(s, i){<br>
+    //check if not number<br>
+    if (!(typeof s === "number"))<br>
+    {<br>
+      console.log(`Not number: ${s}`)<br>
+    }else{<br>
+      console.log(`Is a number: ${s}`)<br>
+      //assign new values to min and max<br>
+      if (s<min){<br>
+        min = s<br>
+      }<br>
+      if(s>max){<br>
+        max = s<br>
+      }<br>
+    }<br>
+  })<br>
+<br>
+  //check if min and max has been modified (at least 1 number exist in the array)<br>
+  if (max != -Infinity && min != Infinity)<br>
+  {<br>
+    //populate result array<br>
+    result_array[index].push(min)<br>
+    result_array[index].push(max)<br>
+  }else{<br>
+   result_array[index].push("No numbers found")<br>
+  }<br>
+  max = -Infinity<br>
+  min = Infinity<br>
+})<br>
+console.log(result_array)<br>
+        </a><br>
     </div>
 </body>
 
