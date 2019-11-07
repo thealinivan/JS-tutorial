@@ -5,9 +5,10 @@ body {
 }
 
 .head-container {
-    background-image: linear-gradient(to bottom right, rgb(54, 179, 172), rgb(128, 209, 205));
+    background-image: linear-gradient(to bottom right, rgb(20, 179, 172), rgb(128, 209, 205));
     color: rgb(48, 52, 54);
     padding: 1px;
+    box-shadow: 2px 1px 5px .6px #afafaf;
 }
 
 .back-btn {
@@ -39,12 +40,14 @@ body {
 
 .exercise,
 .exercise-in,
-.exercise-in-sol {
+.exercise-in-sol,
+.test {
     display: block;
     min-width: 200px;
     width: 100%;
     margin-bottom: 10px;
     padding: 20px 0 20px 0;
+    border-radius: 10px;
     box-shadow: 2px 1px 5px .6px #afafaf;
     text-decoration: none;
     color: rgb(48, 52, 54);
@@ -73,6 +76,46 @@ body {
     font-size: 12px;
 }
 
+
 .exercise:hover {
     box-shadow: 2px 1px 15px .6px #a5a5a5;
+}
+
+.test{
+  background-image: linear-gradient(to bottom right, rgb(20, 179, 172), rgb(128, 209, 205));
+}
+
+input, button, .output{
+  font-size: 20px;
+  background-color: transparent;
+  border:none;
+  padding: 10px;
+  color: rgb(58, 131, 129);
+  transition: all .3s;
+}
+input {
+  border-bottom: 1px solid rgb(156, 210, 208);
+  border-right: 0px solid rgb(156, 210, 208);
+  width: 60%;
+}
+
+input:focus{
+  outline:none;
+  border-bottom-color: white;
+  color: rgb(58, 131, 129);
+}
+button{
+    margin-left:-4px;
+    border: 1px solid rgb(156, 210, 208);
+    border-bottom:none;
+}
+button:hover{
+    border-color: white;
+}
+::placeholder{
+  color: rgb(58, 131, 129);
+}
+
+.output{
+  font-size: 14px;
 }

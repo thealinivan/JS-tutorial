@@ -2,10 +2,10 @@
 <html>
 
 <head>
-    <script src="script/index.js"></script>
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="index.js"></script>
 </head>
 
 <body>
@@ -19,6 +19,7 @@
     <a href="index.html" class=back-btn></a>
     <div class=nav-container>
         <h2>Lesson 0: exercise 1</h2>
+        <br>
         <a href="#" class=exercise-in>Given you have string "0123456789" please use a while loop to iterate over it.<br>
                 The goal is to have with 2 variables called numOdd and numEven with values of how many items in that
                 string times 3 are even and how many odd, these values should be numbers.<br>
@@ -26,6 +27,7 @@
                 At each iteration we should log out to the console a string which says
                 'CURRENT ITEM IN THE STRING times 3 is even' or 'CURRENT ITEM IN THE STRING times 3 is odd'
                 </a>
+                <br>
         <p>My approach:</p>
         <a href="exercise2.html" class=exercise-in-sol>
                 const evenStr = `CURRENT ITEM IN THE STRING times 3 is even`<br>
@@ -55,8 +57,19 @@
                 }<br>
                 <br>
                 console.log(`Even numbers qty: ${numEven.value}`)<br>
-                console.log(`Odd numbers qty: ${numOdd.value}`)</a><br>
+                console.log(`Odd numbers qty: ${numOdd.value}`)
+          </a><br>
+          <br>
+          <p>Test this solution:</p>
+          <div class="test">
+            <br>
+            <input type="text" name="input" id="inp-ex1" placeholder="Your input here..">
+            <button id="btn-ex1" onclick="ex1()">Run Code</button>
+            <br>
+            <br>
+            <p class=output id=output>See output in console</p>
+          </div>
+
     </div>
 </body>
-
 </html>

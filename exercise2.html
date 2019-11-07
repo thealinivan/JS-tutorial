@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <script src="script/index.js"></script>
+    <script src="index.js"></script>
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -19,6 +19,7 @@
     <a href="index.html" class=back-btn></a>
     <div class=nav-container>
         <h2>Lesson 0: exercise 2</h2>
+        <br>
         <a href="#" class=exercise-in>Consider this array<br>
                 [["oops",7,"oops",0],<br>
                 [-10,0,0,0],<br>
@@ -40,6 +41,7 @@
                 <br>
                 Keep in mind the nested arrays are not the same length and<br>
                 not all the values are of same type.<br></a>
+                <br>
         <p>My approach:</p>
         <a href="exercise2.html" class=exercise-in-sol>
          //input array<br>
@@ -85,6 +87,16 @@ input_array.forEach(function(item, index) {<br>
 })<br>
 console.log(result_array)<br>
         </a><br>
+        <br>
+        <p>Test this solution:</p>
+        <div class="test">
+          <br>
+          <input type="text" name="input" id="inp-ex2" placeholder="Your input here..">
+          <button id="btn-ex1" onclick="ex2()">Run Code</button>
+          <br>
+          <br>
+          <p class=output id=output>See output in console</p>
+        </div>
     </div>
 </body>
 
