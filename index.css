@@ -103,7 +103,7 @@ input {
 input:focus{
   outline:none;
   border-bottom-color: white;
-  color: white;
+  color: rgba(255, 255, 255, 0.7);
 }
 button{
     margin-left:-4px;
@@ -112,7 +112,7 @@ button{
 }
 button:hover{
     border-color: white;
-    color: white;
+    color: rgba(255, 255, 255, 0.7);
 }
 ::placeholder{
   color: rgb(58, 131, 129);
