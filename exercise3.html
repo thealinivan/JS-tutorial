@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+
+    </div>
+    <div class=head-container>
+        <h1>JavaScript Class</h1>
+        <h5>My approach to Coders In Hoods classroom exercises</h5>
+    </div>
+    <a href="index.html" class=back-btn></a>
+    <div class=nav-container>
+        <h2>Lesson 1: exercise 3: Objects</h2>
+        <br>
+        <a href="#" class=exercise-in>You already have a list of books available from books.js file object,<br>
+        all you need to do is add them to your library.<br>
+        This books object is pulled in from google books api, as you can see it<br>
+        has a lot of information but this is standard when dealing with external APIs.<br>
+<br>
+        Open index.html and have a look what you have available.<br>
+        By clicking left and right buttons you should be able to see the information about<br>
+        each read book.<br>
+<br>
+        The infrastrucure of showing these books is already set up.<br>
+<br>
+        All you need to do is:<br>
+<br>
+        1. Create and array named readBooks, should start off empty<br>
+        and eventually hold book objects. Each object should look something like this<br>
+        it is important to name the keys as they are in the example below.<br>
+        {<br>
+            title: string,<br>
+            image: string,<br>
+            authors: array,<br>
+            averageRating: number,<br>
+            epub: boolean,<br>
+            shortDescription: string - Only the first sentence of a description.<br>
+        }<br>
+<br>
+        2. Create a function named read, this function should accept one parameter,<br>
+        the body of the function should create a book object<br>
+        and push it into the readBooks array.<br>
+<br>
+        Clicking each book in the Books list calls your read() function and passes a book<br>
+        into it (already set up for you), this book item has a lot of information and we need to narrow it<br>
+        down to only have the information we need.<br>
+<br>
+
+
+        Hint: most of the information is under volumeInfo key<br>
+        Hint: some keys are not always defined, how do you make sure you will not end up with something undefined in your book object<br>
+<br>
+        Bonus: You should only be able to read a book once<br>
+        </a><br>
+        <p>My approach:</p>
+        <a href="exercise3.html" class=exercise-in-sol>
+          const readBooks = []<br>
+          const getVal = bookProp => bookProp === undefined ? "-" : bookProp<br>
+          const read = book => {<br>
+            let readBook = {}<br>
+            if (readBooks.find(rb => rb.title === book.volumeInfo.title)){alert("Already read");return}<br>
+            readBook.title = getVal(book.volumeInfo.title)<br>
+            readBook.image = getVal(book.volumeInfo.imageLinks.thumbnail)<br>
+            readBook.authors = getVal(book.volumeInfo.authors)<br>
+            readBook.averageRating = getVal(book.volumeInfo.averageRating)<br>
+            readBook.epub = getVal(book.accessInfo.epub.isAvailable)<br>
+            readBook.shortDescription = getVal(book.volumeInfo.description.split(".")[0])<br>
+            readBooks.push(readBook)<br>
+          }<br>
+        </a><br>
+        <br>
+        <p>Test this solution:</p>
+        <div class="test">
+          <p class=output id=output>
+            <a class=output href="carousel.html">Access the carousel page</a>
+          </p>
+        </div>
+    </div>
+</body>
+
+</html>

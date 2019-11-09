@@ -97,12 +97,13 @@ input {
   border-bottom: 1px solid rgb(156, 210, 208);
   border-right: 0px solid rgb(156, 210, 208);
   width: 60%;
+
 }
 
 input:focus{
   outline:none;
   border-bottom-color: white;
-  color: rgb(58, 131, 129);
+  color: white;
 }
 button{
     margin-left:-4px;
@@ -111,6 +112,7 @@ button{
 }
 button:hover{
     border-color: white;
+    color: white;
 }
 ::placeholder{
   color: rgb(58, 131, 129);

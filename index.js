@@ -30,6 +30,7 @@ function ex1(){
 
   console.log(`Even numbers qty: ${numEven.value}`)
   console.log(`Odd numbers qty: ${numOdd.value}`)
+  document.getElementById("output").style.color = "white";
 
 }
 
@@ -78,5 +79,6 @@ function ex2(){
     min = Infinity
   })
   console.log(result_array)
+  document.getElementById("output").style.color = "white";
 
 }
