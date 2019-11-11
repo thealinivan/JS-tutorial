@@ -53,18 +53,23 @@ browser console to see what you have available.
 
 
 
-//Create readBook object and push it into array of read books
+// //Create readBook object and push it into array of read books
 const readBooks = []
+//function to protect against undefined
 const getVal = bookProp => bookProp === undefined ? "-" : bookProp
+
 const read = book => {
   let readBook = {}
+  //Avoid double entries for the same book
   if (readBooks.find(rb => rb.title === book.volumeInfo.title)){alert("Already read");return}
+  //create the readBook object
   readBook.title = getVal(book.volumeInfo.title)
   readBook.image = getVal(book.volumeInfo.imageLinks.thumbnail)
   readBook.authors = getVal(book.volumeInfo.authors)
   readBook.averageRating = getVal(book.volumeInfo.averageRating)
   readBook.epub = getVal(book.accessInfo.epub.isAvailable)
   readBook.shortDescription = getVal(book.volumeInfo.description.split(".")[0])
+  //push into carousel array
   readBooks.push(readBook)
 }
 
